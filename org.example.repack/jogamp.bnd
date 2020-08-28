@@ -1,0 +1,27 @@
+ver = 2.3.2
+Bundle-SymbolicName: ${project.name}.jogamp;singleton:=true
+Bundle-Version: ${ver}-SNAPSHOT
+
+-classpath: \
+	lib/jogamp-fat.jar
+
+-sources: true
+
+-output: ${bsn}-${ver}.jar
+
+-includeresource: \
+	@lib/jogamp-fat.jar!/natives*,\
+	/OSGI-OPT/=@lib/jogamp-fat-java-src.zip
+
+Import-Package: \
+	org.jdesktop.applet.util*;resolution:=optional,\
+	sun.awt*;resolution:=optional,\
+	sun.misc*;resolution:=optional,\
+	sun.java2d.opengl*;resolution:=optional,\
+	*
+
+Export-Package: \
+	!natives*,\
+	*;version=${ver}.v${vbuild}
+
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

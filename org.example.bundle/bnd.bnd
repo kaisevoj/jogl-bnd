@@ -1,0 +1,15 @@
+Bundle-SymbolicName: org.example.bundle;singleton:=true
+Bundle-Version: 1.0.0-SNAPSHOT
+
+Bundle-Activator: \
+	org.example.bundle.TestActivator
+	
+-buildpath: \
+	osgi.core;version=7.0.0,\
+	org.example.repack.jogamp,\
+	org.eclipse.osgi
+
+Private-Package: \
+	org.example.bundle
+	
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

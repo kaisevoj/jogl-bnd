@@ -1,0 +1,4 @@
+-dependson: *
+
+-export \
+	launch_base.bndrun
